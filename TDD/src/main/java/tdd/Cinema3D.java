@@ -12,11 +12,10 @@ public class Cinema3D implements Cinema {
 
     @Override
     public Ticket buy(Account account, int row, int column, Calendar date) {
-        return null;
+        return new Ticket3D();
     }
 
     @Override
     public void add(Session session) {
-
     }
 }

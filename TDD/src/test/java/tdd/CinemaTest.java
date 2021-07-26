@@ -1,13 +1,14 @@
 package tdd;
 
+import static org.junit.Assert.assertThat;
+import static org.hamcrest.Matchers.is;
+
 import org.junit.Test;
 
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.List;
 
-import static org.junit.Assert.assertThat;
-import static org.hamcrest.Matchers.is;
 
 public class CinemaTest {
 
@@ -32,7 +33,8 @@ public class CinemaTest {
     @Test
     public void add() {
         Cinema cinema = new Cinema3D();
-        cinema.add(new Session3D());
-        assertThat(cinema.find(session -> true), is(true));
+        Session session = new Session3D();
+        cinema.add(session);
+        assertThat(session, is(cinema.find(a -> true).get(0)));
     }
 }

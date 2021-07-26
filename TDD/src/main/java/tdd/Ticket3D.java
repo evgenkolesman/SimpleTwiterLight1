@@ -1,4 +1,4 @@
 package tdd;
 
-public class Ticket3D {
+public class Ticket3D implements Ticket {
 }
